@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="quadrillion">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Registration Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <!-- Custom styles for this template -->
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+   
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="lib/ngstorage/ngStorage.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+</head>
+
+  <body class="login-body" ng-app="starter">
+
+    <div class="container">
+
+      <form id="signup" class="form-signin">
+        <h2 class="form-signin-heading">Registration</h2>
+        <div class="login-wrap">
+            <p>Personal Details</p>
+            <input type="text" class="form-control" id="sn" placeholder="Surname" autofocus>
+            <input type="text" class="form-control" id="oname" placeholder="Other Name(s)" autofocus>
+            <input type="text" class="form-control" id="address" placeholder="Address" autofocus>
+            <input type="text" class="form-control" id="email" placeholder="Email" autofocus>
+            <input type="text" class="form-control" id="phone" placeholder="Phone Number" autofocus>
+            <div class="radios">
+                <label class="label_radio col-lg-6 col-sm-6" for="radio-01">
+                    <input name="sex" id="sex" value="Male" type="radio" checked /> Male
+                </label>
+                <label class="label_radio col-lg-6 col-sm-6" for="radio-02">
+                    <input name="sex" id="sex" value="Female" type="radio" /> Female
+                </label>
+            </div>
+
+            <input class="form-control" style="padding:7px; width:100%; margin-bottom:3px;" id="dob" type="date" value="" placeholder="Date of Birth"/>
+
+            <div class="radios">
+                <label class="label_radio col-lg-6 col-sm-6" for="radio-01">
+                    <input name="marital" id="marital" value="Single" type="radio" checked /> Single
+                </label>
+                <label class="label_radio col-lg-6 col-sm-6" for="radio-02">
+                    <input name="marital" id="marital" value="Married" type="radio" /> Married
+                </label>
+            </div>
+
+            <select name="state" id="state" class="form-control" style="height:40px; width:100%; margin:10px 0;">
+                                      <option selected="selected" value="-"> - state of origin - </option>
+                                      <option value="abia">Abia</option>
+                                      <option value="adamawa">Adamawa</option>
+                                      <option value="akwa-ibom">Akwa-Ibom</option>
+                                      <option value="anambra">Anambra</option>
+                                      <option value="bauchi">Bauchi</option>
+                                      <option value="bayelsa">Bayelsa</option>
+                                      <option value="benue">Benue</option>
+                                      <option value="borno">Borno</option>
+                                      <option value="crossriver">Cross-River</option>
+                                      <option value="delta">Delta</option>
+                                      <option value="ebonyi">Ebonyi</option>
+                                      <option value="edo">Edo</option>
+                                      <option value="ekiti">Ekiti</option>
+                                      <option value="enugu">Enugu</option>
+                                      <option value="gombe">Gombe</option>
+                                      <option value="imo">Imo</option>
+                                      <option value="jigawa">Jigawa</option>
+                                      <option value="kaduna">Kaduna</option>
+                                      <option value="kano">Kano</option>
+                                      <option value="katsina">Katsina</option>
+                                      <option value="kebbi">Kebbi</option>
+                                      <option value="kogi">Kogi</option>
+                                      <option value="kwara">Kwara</option>
+                                      <option value="lagos">Lagos</option>
+                                      <option value="nasarawa">Nasarawa</option>
+                                      <option value="niger">Niger</option>
+                                      <option value="ogun">Ogun</option>
+                                      <option value="ondo">Ondo</option>
+                                      <option value="osun">Osun</option>
+                                      <option value="oyo">Oyo</option>
+                                      <option value="plateau">Plateau</option>
+                                      <option value="rivers">Rivers </option>
+                                      <option value="sokoto">Sokoto</option>
+                                      <option value="taraba">Taraba</option>
+                                      <option value="yobe">Yobe</option>
+                                      <option value="zamfara">Zamfara</option>
+                                      <option value="fct">Abuja (F.C.T)</option>
+                                      <option value="Others">Others</option>
+                                  </select>
+
+            <p> Educational Details</p>
+            <input type="text" class="form-control" id="matric" placeholder="Matriculation Number" autofocus>
+            <input type="text" class="form-control" id="jamb" placeholder="Jamb Reg Number" autofocus>
+            <input type="text" class="form-control" id="dept" placeholder="Department" autofocus>
+            <select name="grade" id="grade" class="form-control" style="height:40px; width:100%; margin:10px 0;">
+                                      <option selected="selected" value="-"> - Grade - </option>
+                                      <option value="Pass">Pass</option>
+                                      <option value="Third-class">Third Class</option>
+                                      <option value="Second-class-lower">Second Class Lower</option>
+                                      <option value="Second-class-upper">Second Class Upper</option>
+                                      <option value="First-Class">First Class</option>
+            </select>
+            <p> Acoount Details</p>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" placeholder="Re-type Password">
+
+            <p> Passport Photograph</p>
+            <div class="has-header has-bottom" padding="true" ng-controller="CameraCtrl">
+
+              <div class="button-bar"> <a class="button" ng-click="takePicture();">Take Photo</a> | <a class="button" ng-click="selectPicture()">Choose Photo</a></div>
+              <div ng-show="picData" class="item item-image">When pics loaded click to upload!<img id="myImage" class="item" ng-src="{{picData}}" ng-click="uploadPicture()" style="height:200px; width:200px; "/></div>
+            </div>
+            <button class="btn btn-lg btn-login btn-block" id="btnsub" type="submit">Submit</button>
+
+            <div class="registration">
+                Already Registered.
+                <a class="" href="index.html">
+                    Login
+                </a>
+            </div>
+
+        </div>
+
+      </form>
+
+    </div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$( "#signup" ).submit(function( event ) {
+  //alert("got here");
+   var sn = $('#sn').val();
+   var otn = $('#oname').val();
+   var address = $('#address').val();
+   var email = $('#email').val();
+   var phone = $('#phone').val();
+   var sex = $('#sex').val();
+   var dob = $('#dob').val();
+   var marital = $('#marital').val();
+   var state = $('#state').val();
+   var matric = $('#matric').val();
+   var jamb = $('#jamb').val();
+   var grade = $('#grade').val();
+   var password = $('#password').val();
+   var dept = $('#dept').val();
+
+      $.ajax({
+
+        type: "POST",
+        url: "http://walequadri.com/nysc/insert.php",
+        data: "sn="+sn+"&otn="+otn+"&address="+address+"&email="+email+"&phone="+phone+"&sex="+sex+"&dob="+dob+"&marital="+marital+"&state="+state+"&matric="+matric+"&jamb="+jamb+"&grade="+grade+"&password="+password+"&dept="+dept,
+        dataType: "json",
+        success: function(msg,string,jqXHR){
+          //alert(msg+string+jqXHR);
+          alert("Registration Sucessful! You can now proceed to login.");
+          window.location.replace("index.html");
+
+        }
+
+      });
+  event.preventDefault();
+});
+</script>
+  </body>
+</html>
